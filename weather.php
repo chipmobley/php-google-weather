@@ -17,14 +17,17 @@ class GoogleWeather {
 		return 'http://www.google.com/ig/api?weather='.$this->zip_code;
 	}
 	
+	# returns XML from Google Weather API
 	function print_xml(){
 		return $this->google_xml;	
 	}
 	
+	# returns City, State
 	function getlocation(){
 		return $this->location;
 	}
 	
+	# returns current temperature
 	function getcurrenttemp(){
 		return $this->current_temp;
 	}

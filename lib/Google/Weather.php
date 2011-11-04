@@ -2,8 +2,6 @@
 /**
  * Google Weather API Class
  * 
- * @since 1.1
- * @author Rodrigo da Rosa Elesbão <slipknabos@gmail.com>
  * @todo Put your author here
  * @license //put your license here
  */

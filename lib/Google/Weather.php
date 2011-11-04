@@ -65,7 +65,12 @@ class Google_Weather
 			//TODO: Manage exceptions
 			return false;
 		}
-		
-		$apiUrl = urlencode( $this->_apiUrl + $this->_location );		
+		$apiUrl = $this->_apiUrl . $this->_location;
+		$result = simplexml_load_file( $apiUrl );
+		if( !$result instanceof SimpleXMLElement ){
+			return false;
+		}
+		$this->_weather = $result->weather;
+		return $this;
 	}
 }
